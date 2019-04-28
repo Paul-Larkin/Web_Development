@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Assignment Grades</title>
+        <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div>    <!--Div contains table-->
+        <form>   <!--Table of Names, Id's, assignment grades and final results-->
+            <table id="examGrades">
+                <caption class="bold" id="caption">Student Grades</caption>
+                    <tr>
+                        <th class="bold">Student Name</th>
+                        <th class="bold">Student ID</th>
+                        <th class="bold">Assignment 1</th>
+                        <th class="bold">Assignment 2</th>
+                        <th class="bold">Assignment 3</th>
+                        <th class="bold">Assignment 4</th>
+                        <th class="bold">Assignment 5</th>
+                        <th class="bold">Final Grade</th>
+                    </tr>
+                    <tr>
+                        <td class="leftAlign">Shirline Grinblat</td>
+                        <td class="leftAlign">1723</td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100"  class="rightAlign" id="assignmentOneS1"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentTwoS1"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentThreeS1"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFourS1"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFiveS1"></label></td>
+                        <td class="rightAlign" id="gradeS1"></td>
+                    </tr>
+                    <tr>
+                        <td class="leftAlign">Baryram Shanabarger</td>
+                        <td class="leftAlign">1040</td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentOneS2"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentTwoS2"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentThreeS2"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFourS2"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFiveS2"></label></td>
+                        <td class="rightAlign"  id="gradeS2"></td>
+                    </tr>
+                    <tr>
+                        <td class="leftAlign">Odele Santner</td>
+                        <td class="leftAlign">4258</td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentOneS3"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentTwoS3"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentThreeS3"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFourS3"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFiveS3"></label></td>
+                        <td class="rightAlign" id="gradeS3"></td>
+                    </tr>
+                    <tr>
+                        <td class="leftAlign">Grantley Manly</td>
+                        <td class="leftAlign">5205</td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentOneS4"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentTwoS4"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentThreeS4"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFourS4"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFiveS4"></label></td>
+                        <td class="rightAlign" id="gradeS4"></td>
+                    </tr>
+                    <tr>
+                        <td class="leftAlign">Edna Sampson</td>
+                        <td class="leftAlign">2504</td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentOneS5"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentTwoS5"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentThreeS5"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFourS5"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFiveS5"></label></td>
+                        <td class="rightAlign" id="gradeS5"></td>
+                    </tr>
+                    <tr>
+                        <td class="leftAlign">Farleigh Diliddo</td>
+                        <td class="leftAlign">9487</td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentOneS6"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentTwoS6"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentThreeS6"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFourS6"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFiveS6"></label></td>
+                        <td class="rightAlign" id="gradeS6"></td>
+                    </tr>
+                    <tr>
+                        <td class="leftAlign">Valeria Jeannette Witt</td>
+                        <td class="leftAlign">3954</td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentOneS7"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentTwoS7"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentThreeS7"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFourS7"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFiveS7"></label></td>
+                        <td class="rightAlign" id="gradeS7"></td>
+                    </tr>
+                    <tr>
+                        <td class="leftAlign">Francis Morris</td>
+                        <td class="leftAlign">5934</td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentOneS8"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentTwoS8"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentThreeS8"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFourS8"></label></td>
+                        <td class="rightAlign"><label><input type="number" vin="0" max="100" value="-" class="rightAlign" id="assignmentFiveS8"></label></td>
+                        <td class="rightAlign" id="gradeS8"></td>
+                    </tr>
+                    <tr>
+                        <td class="leftAlign">Doug Dunlap</td>
+                        <td class="leftAlign">1923</td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentOneS9"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentTwoS9"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentThreeS9"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFourS9"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFiveS9"></label></td>
+                        <td class="rightAlign" id="gradeS9"></td>
+                    </tr>
+                    <tr>
+                        <td class="leftAlign">Lusia Le Guennec</td>
+                        <td class="leftAlign">5340</td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentOneS10"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentTwoS10"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentThreeS10"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFourS10"></label></td>
+                        <td class="rightAlign"><label><input type="number" min="0" max="100" value="-" class="rightAlign" id="assignmentFiveS10"></label></td>
+                        <td class="rightAlign" id="gradeS10"></td>
+                    </tr>
+            </table><!--End table-->
+        </form><!--End form-->
+    </div><!--End table div-->
+    <br>
+    <div><!--Div for button-->
+        <button id="calculate" onclick="calculate()">Calculate Final Grades</button><!--Button for calculating-->
+    </div><!--End button div-->
+    <div id = un-sub><!--Div for button-->
+        <p id="unsubAssignments"># Of un-submitted assigment will appear here</p>
+    </div><!--End button div-->
+
+</body>
+</html>
