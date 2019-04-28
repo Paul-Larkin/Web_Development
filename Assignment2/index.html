@@ -1,0 +1,68 @@
+<!Doctype HTML>
+<html>
+
+  <head>
+    <title>Project 2</title>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+
+  <body>
+    <div id="container">
+      <div>
+        <table id="gradesTable" contenteditable="true" onkeyup="calculateGrades()">
+          <caption id="caption">Student Grades</caption>
+          <tr>
+            <th class="bold">Student Name</th>
+            <th class="bold">Student ID</th>
+            <th class="bold">Assignment 1</th>
+            <th class="bold">Result</th>
+          </tr>
+          <tr>
+            <td class="details" onclick="this.innerHTML=''" contenteditable="true">-</td>
+            <td class="details" onclick="this.innerHTML=''" contenteditable="true">-</td>
+            <td class="grade" onclick="this.innerHTML=''" contenteditable="true">-</td>
+            <td class="result" onclick="this.innerHTML=''" contenteditable="false">-</td>
+          </tr>
+        </table>
+      </div>
+      <br>
+      <div>
+        <button id="calculateButton" onclick="calculateGrades()">Calculate Grade</button>
+      </div>
+      <br>
+      <div>
+        <button id="addRow" onclick="addRow()">Add New Row</button>
+      </div>
+      <br>
+      <div>
+        <button id="delRow" onclick="delRow()">Del Row</button>
+      </div>
+      <br>
+      <div>
+        <button id="addColumn" onclick="addColumn()">Add New Column</button>
+      </div>
+      <br>
+      <div>
+        <button id="delColumn" onclick="delColumn()">Del Column</button>
+      </div>
+      <br>
+      <div>
+        <button id="saveCookie" onclick="createCookie()">Save Cookie</button>
+      </div>
+      <br>
+      <div>
+        <button id="deleteCookie" onclick="deleteCookie()">Delete Cookie</button>
+      </div>
+      <br>
+      <div>
+        <button id="readCookie" onclick="readCookie()">Read Cookie</button>
+      </div>
+      <br>
+      <div>
+        <button id="revertState" onclick="">Revert State</button>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,185 @@
+body {
+  margin: 10px;
+  font-family: sans-serif;
+  background-color: silver;
+  padding: 20px;
+}
+
+#container {
+  background-color: white;
+  padding: 30px;
+  border: 1px solid #001F3F;
+}
+
+table,
+td,
+tr,
+th,
+caption {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  border-spacing: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#caption {
+  font-size: 40px;
+  font-weight: bold;
+  background: #001F3F;
+  color: white;
+}
+
+.grade {
+  text-align: center;
+  background: yellow;
+}
+
+.details {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+  background-color: lightgray;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50%;
+}
+
+#calculateButton {
+  padding-left: auto;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  background-color: #00ff00;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-color: black;
+}
+
+#addColumn {
+  padding-left: auto;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  background-color: yellow;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-color: black;
+}
+
+#addRow {
+  padding-left: auto;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  background-color: skyblue;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-color: black;
+}
+
+#saveCookie {
+  padding-left: auto;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  background-color: orange;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-color: black;
+}
+
+#deleteCookie {
+  padding-left: auto;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  background-color: silver;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-color: black;
+}
+
+#displayCookie {
+  padding-left: auto;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  background-color: gold;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-color: black;
+}
+
+#delColumn {
+  padding-left: auto;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  background-color: purple;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-color: black;
+}
+
+#delRow {
+  padding-left: auto;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  background-color: blue;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-color: black;
+}
+
+#readCookie {
+  padding-left: auto;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  background-color: blue;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-color: black;
+}
+
+#revertState {
+  padding-left: auto;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  border-color: black;
+}
