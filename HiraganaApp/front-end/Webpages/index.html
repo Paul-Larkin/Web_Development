@@ -1,0 +1,384 @@
+<DOCTYPE !html>
+<html>
+<head>
+	  <meta charset="UTF-8">
+	  <link rel="stylesheet" type="text/css" href="../Stylesheets/index.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="../Scripts/index.js" type="text/javascript" charset="utf-8" async defer></script>
+		<title>Hiragana Tutor</title>
+</head>
+<body>
+	<div class="row" id="banner">
+		<div class="column" id="heading">
+			<h1 id="MainHeading">Hiragana Tutor</h1>
+		</div>
+		<div class="row" id="buttonRow">
+			<div class="column"><button type="submit" class="navButton" onclick="showHide('hiraganaChart', 'trainingTable', 'quizTable', 'form')">Home</button></div>
+			<div class="column"><button type="submit" class="navButton" onclick="showHide('trainingTable', 'hiraganaChart', 'quizTable', 'form'); changeSet('1'); setOne(); nextCard()">Training Sets/Set Quiz</button></div>
+			<div class="column"><button id="quizButton" type="submit" class="navButton" onclick="showHide('quizTable', 'hiraganaChart', 'trainingTable', 'form'); changeSet('0'); generateQuiz()">Quick Quiz</button></div>
+			<div class="column"><button type="submit" class="navButton" onclick="showHide('form', 'hiraganaChart', 'trainingTable', 'quizTable')">Sign in/Register</button></div>
+		</div>
+	</div>
+	<hr>
+	<div id="refs">
+	<p> <b>All images .png and .gifs courtesy of:</b><br> Commons.wikimedia.org. (2019). Hiragana - Wikimedia Commons. <br>
+		[online] Available at: <a href="https://commons.wikimedia.org/wiki/Hiragana?fbclid=IwAR0eMPDrSPsfjhNAZFg2UZL19sjB-MjCv00UXynm9DHwSBQjkM4MDyg3s6Q">
+		https://commons.wikimedia.org/wiki/Hiragana?fbclid=IwAR0eMPDrSPsfjhNAZFg2UZL19sjB-MjCv00UXynm9DHwSBQjkM4MDyg3s6Q</a>
+		 [Accessed 20 Mar. 2019].</p>
+		<p> <b>All sound and.mp3 courtesy of:</b><br> Guidetojapanese.org. (2019). Hiragana – Learn Japanese. <br>
+			[online] Available at: <a href="http://www.guidetojapanese.org/learn/complete/hiragana">
+			http://www.guidetojapanese.org/learn/complete/hiragana</a>
+			[Accessed 20 Mar. 2019].</p>
+	</div>
+	<hr>
+	<!--My table of hiragana characters-->
+	<table id="hiraganaChart">
+		<tr id="firstRow">
+			<td class="hiraganaCharttd">
+				<audio id="a" src="../Media/Sound/a.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/a.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/a.gif" alt="No Image">
+				<p class="center">a</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="i" src="../Media/Sound/i.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/i.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/i.gif" alt="No Image">
+				<p class="center">i</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="u" src="../Media/Sound/u.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/u.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/u.gif" alt="No Image">
+				<p class="center">u</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="e" src="../Media/Sound/e.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/e.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/e.gif" alt="No Image">
+				<p class="center">e</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="o" src="../Media/Sound/o.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/o.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/o.gif" alt="No Image">
+				<p class="center">o</p></td>
+		</tr>
+		<tr id="secondRow">
+			<td class="hiraganaCharttd">
+				<audio id="ka" src="../Media/Sound/ka.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ka.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ka.gif" alt="No Image">
+				<p class="center">ka</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="ki" src="../Media/Sound/ki.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ki.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ki.gif" alt="No Image">
+				<p class="center">ki</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="ku" src="../Media/Sound/ku.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ku.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ku.gif" alt="No Image">
+				<p class="center">ku</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="ke" src="../Media/Sound/ke.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ke.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ke.gif" alt="No Image">
+				<p class="center">ke</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="ko" src="../Media/Sound/ko.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ko.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ko.gif" alt="No Image">
+				<p class="center">ko</p></td>
+		</tr>
+		<tr id="thirdRow">
+			<td class="hiraganaCharttd">
+				<audio id="sa" src="../Media/Sound/sa.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/sa.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/sa.gif" alt="No Image">
+				<p class="center">sa</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="shi" src="../Media/Sound/shi.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/shi.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/shi.gif" alt="No Image">
+				<p class="center">shi</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="su" src="../Media/Sound/su.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/su.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/su.gif" alt="No Image">
+				<p class="center">su</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="se" src="../Media/Sound/se.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/se.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/se.gif" alt="No Image">
+				<p class="center">se</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="so" src="../Media/Sound/so.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/so.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/so.gif" alt="No Image">
+				<p class="center">so</p></td>
+		</tr>
+		<tr id="fourthRow">
+			<td class="hiraganaCharttd">
+				<audio id="ta" src="../Media/Sound/ta.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ta.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ta.gif" alt="No Image">
+				<p class="center">ta</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="chi" src="../Media/Sound/chi.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/chi.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/chi.gif" alt="No Image">
+				<p class="center">chi</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="tsu" src="../Media/Sound/tsu.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/tsu.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/tsu.gif" alt="No Image">
+				<p class="center">tsu</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="te" src="../Media/Sound/te.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/te.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/te.gif" alt="No Image">
+				<p class="center">te</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="to" src="../Media/Sound/to.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/to.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/to.gif" alt="No Image">
+				<p class="center">to</p></td>
+		</tr>
+		<tr id="fifthRow">
+			<td class="hiraganaCharttd">
+				<audio id="na" src="../Media/Sound/na.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/na.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/na.gif" alt="No Image">
+				<p class="center">na</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="ni" src="../Media/Sound/ni.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ni.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ni.gif" alt="No Image">
+				<p class="center">ni</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="nu" src="../Media/Sound/nu.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/nu.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/nu.gif" alt="No Image">
+				<p class="center">nu</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="ne" src="../Media/Sound/ne.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ne.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ne.gif" alt="No Image">
+				<p class="center">ne</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="no" src="../Media/Sound/no.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/no.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/no.gif" alt="No Image">
+				<p class="center">no</p></td>
+		</tr>
+		<tr id="sixthRow">
+			<td class="hiraganaCharttd">
+				<audio id="ha" src="../Media/Sound/ha.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ha.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ha.gif" alt="No Image">
+				<p class="center">ha</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="hi" src="../Media/Sound/hi.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/hi.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/hi.gif" alt="No Image">
+				<p class="center">hi</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="hu" src="../Media/Sound/hu.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/hu.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/hu.gif" alt="No Image">
+				<p class="center">hu</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="he" src="../Media/Sound/he.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/he.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/he.gif" alt="No Image">
+				<p class="center">he</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="ho" src="../Media/Sound/ho.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ho.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ho.gif" alt="No Image">
+				<p class="center">ho</p></td>
+		</tr>
+		<tr id="seventhRow">
+			<td class="hiraganaCharttd">
+				<audio id="ma" src="../Media/Sound/ma.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ma.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ma.gif" alt="No Image">
+				<p class="center">ma</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="mi" src="../Media/Sound/mi.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/mi.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/mi.gif" alt="No Image">
+				<p class="center">mi</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="mu" src="../Media/Sound/mu.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/mu.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/mu.gif" alt="No Image">
+				<p class="center">mu</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="me" src="../Media/Sound/me.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/me.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/me.gif" alt="No Image">
+				<p class="center">me</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="mo" src="../Media/Sound/mo.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/mo.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/mo.gif" alt="No Image">
+				<p class="center">mo</p></td>
+		</tr>
+		<tr id="eightRow">
+			<td class="hiraganaCharttd">
+				<audio id="ra" src="../Media/Sound/ra.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ra.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ra.gif" alt="No Image">
+				<p class="center">ra</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="ri" src="../Media/Sound/ri.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ri.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ri.gif" alt="No Image">
+				<p class="center">ri</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="ru" src="../Media/Sound/ru.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ru.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ru.gif" alt="No Image">
+				<p class="center">ru</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="re" src="../Media/Sound/re.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/re.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/re.gif" alt="No Image">
+				<p class="center">re</p></td>
+			<td class="hiraganaCharttd">
+				<audio id="ro" src="../Media/Sound/ro.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ro.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ro.gif" alt="No Image">
+				<p class="center">ro</p></td>
+		</tr>
+		<tr id="ninthRow">
+			<td class="hiraganaCharttd">
+				<audio id="ya" src="../Media/Sound/ya.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/ya.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/ya.gif" alt="No Image">
+				<p class="center">ya</p></td>
+			<td>
+				 <p class="center"> </p></td>
+			<td class="hiraganaCharttd">
+				<audio id="yu" src="../Media/Sound/yu.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/yu.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/yu.gif" alt="No Image">
+				<p class="center">yu</p></td>
+			<td>
+				 <p class="center"> </p></td>
+			<td class="hiraganaCharttd">
+				<audio id="yo" src="../Media/Sound/yo.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/yo.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/yo.gif" alt="No Image">
+				<p class="center">yo</p></td>
+		</tr>
+		<tr id="tenthRow">
+			<td class="hiraganaCharttd">
+				<audio id="wa" src="../Media/Sound/wa.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/wa.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/wa.gif" alt="No Image">
+				<p class="center">wa</p></td>
+			<td>
+				 <p class="center"> </p></td>
+			<td>
+				 <p class="center"> </p></td>
+			<td>
+				 <p class="center"> </p></td>
+			<td class="hiraganaCharttd">
+				<audio id="wo" src="../Media/Sound/wo.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/wo.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/wo.gif" alt="No Image">
+				<p class="center">wo</p></td>
+		</tr>
+		<tr id="eleventhRow">
+			<td class="hiraganaCharttd">
+				<audio id="n" src="../Media/Sound/n.mp3"></audio>
+				<img class="static" src="../Media/Static_Characters/n.png" alt="No Image">
+				<img class="active" src="../Media/Gifs/n.gif" alt="No Image">
+				<p class="center">n</p></td>
+			<td>
+				 <p class="center"> </p></td>
+			<td>
+				 <p class="center"> </p></td>
+			<td>
+				 <p class="center"> </p></td>
+			<td>
+				 <p class="center"> </p></td>
+		</tr>
+	</table>
+
+	<!--My table of for the quiz-->
+	<table  id="quizTable" onload="generateQuiz()" style="display: none;  width: 50px; height: 50px;">
+		<caption id="quizTableCaption">	<span id="signedIn"></span>In this section the user must match the Romaji with it's corresponding Hiragani and Vice Versa</caption>
+	  <tr style="width: 50px; height: 50px;">
+	    <td id="question"></td>
+	    <td id="score"></td>
+	  </tr>
+	  <tr>
+				<td class="quizTabletd" onclick="answerQuestion('1')" id="1" value="1">1</td>
+				<td class="quizTabletd" onclick="answerQuestion('2')" id="2" value="2">2</td>
+			</tr>
+			<tr>
+				<td class="quizTabletd" onclick="answerQuestion('3')" id="3" value="3">3</td>
+				<td class="quizTabletd" onclick="answerQuestion('4')" id="4" value="4">4</td>
+			</tr>
+		</table>
+
+	<!--My table of for training-->
+		<table id="trainingTable" style="display: none; width: 50px;">
+			<tr>
+				<td>
+					<div class="center">
+						<button class="setButton" type="button" name="button" id="setOne" onclick="setOne(); changeSet('1')">Set(A)</button>
+						<button class="setButton" type="button" name="button" id="setTwo" onclick="setTwo(); changeSet('2')">Set(I)</button>
+						<button class="setButton" type="button" name="button" id="setThree" onclick="setThree(); changeSet('3')">Set(U)</button>
+						<button class="setButton" type="button" name="button" id="setFour" onclick="setFour(); changeSet('4')">Set(E)</button>
+						<button class="setButton" type="button" name="button" id="setFive" onclick="setFive(); changeSet('5')">Set(O)</button>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<caption>Hover inside the box below to reveal romaji</caption>
+				</td>
+				<td id="flashCard" class="trainingTabletd">Pick a character set to begin training</td>
+			</tr>
+				<td>
+					<div class="box">
+							<div id="cardName">
+							</div>
+					</div>
+				</td>
+			</tr>
+		<br>
+			<tr>
+				<td>
+					<div class="center">
+						<button class="center" id="nextButton" type="button" name="button" onclick="nextCard()">Next Card</button><br><br>
+
+						<button class="center" id="setQuiz" type="button" name="button" onclick="showHide('quizTable','form','trainingTable','hiraganaChart'); generateQuiz()">Set Quiz</button>
+					</div>
+				</td>
+			</tr>
+		<br>
+		</table>
+
+	<!--My forms for signing in/registering-->
+		<div id="form" style="display: none";>
+					<form action="../../web-service/register.php" name="registerForm" id="registerForm" method="POST">
+						Username: <input type="text" value="" name="userName"></label>
+						Password:<input type="password" value="" name="passWord"></label>
+						<button class="regButton" name="regButton" id="regButton">Register</button>
+					</form>
+					<br>
+					<form action="../../web-service/signIn.php" name="signInForm" id="signInForm" method="GET">
+						Username: <input type="text" value="" name="userName"></label>
+						Password:<input type="password" value="" name="passWord"></label>
+						<button class="regButton" name="signInButton" id="signInButton">Sign In</button>
+					</form>
+		</div>
+		<div id="scores" style="display: none;">
+				<span id="signedIn"></span>
+		</div>
+
+
+</body>
+</html>

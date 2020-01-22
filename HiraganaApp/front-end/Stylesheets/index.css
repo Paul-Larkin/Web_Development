@@ -1,0 +1,276 @@
+/*
+ * Whole page related
+ */
+body {
+	font-family: sans-serif;
+	background: lightgray;
+}
+
+#banner {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#MainHeading{
+	text-align: center;
+	margin-top: 20px;
+	font-size: 54px;
+	font-family: sans-serif;
+}
+
+#heading{
+	width: 100%;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.flag {
+	height: 40px;
+}
+
+input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+.center {
+	font-size: 40px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#buttonRow{
+	width:100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#buttonRow2{
+	width:100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.column{
+	display: inline-block;
+	padding: 1px;
+	width: 100px;
+}
+
+.navButton{
+	height: 40px;
+	width: 150px;
+	background-color: white;
+	border: 1px solid black;
+	float: left;
+	font-family: sans-serif;
+}
+
+/*
+ * hiraganaChart css
+ */
+.static {
+	position: absolute;
+	background: white;
+	height: 80px;
+	width: 80px;
+	align-items: center;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.static:hover {
+	opacity:0;
+}
+
+.active {
+	height: 80px;
+	width: 80px;
+	align-items: center;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#hiraganaChart {
+	width: 50%;
+	height: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 30px;
+	align-content: center;
+}
+
+.hiraganaChartth, .hiraganaCharttd {
+	border: 10px solid black;
+	padding: 25px;
+	box-shadow:10px 10px 10px red;
+	height: 100px;
+	width: 50px;
+	background: white;
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*
+ * form css
+ */
+#registerForm {
+		width: 180px;
+		margin-left: auto;
+		margin-right: auto;
+		border: 1px solid black;
+			padding: 30px;
+	}
+
+#signInForm {
+		width: 180px;
+		margin-left: auto;
+		margin-right: auto;
+		border: 1px solid black;
+			padding: 30px;
+	}
+
+.regButton{
+	height: 40px;
+	width: 100%;
+	background-color: white;
+	border: 1px solid black;
+	font-family: sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#form {
+	text-align: center;
+	width: 25%;
+	border-radius: 0px;
+	padding: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*
+ * quizTable css
+ */
+#quizTable, .quizTableCaption {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+	width: 25%;
+	height: 25%;
+	padding: 25px;
+	border-spacing: 30px;
+}
+
+ .quizTabletd, .quizTableth  {
+	border: 10px solid black;
+	padding: 50px;
+	box-shadow:10px 10px 10px red;
+	height: 20px;
+	width: 50px;
+	background: white;
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*
+ * trainingTable class
+ */
+.setButton{
+	height: 40px;
+	background-color: white;
+	border: 1px solid black;
+	font-family: sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#buttonRow{
+	margin-left: auto;
+	margin-right: auto;
+	width:10%;
+	text-align: center;
+}
+
+#cardName {
+	opacity:0;
+	text-align: center;
+	font-size: 75px;
+	width: 125px;
+	height: 100px;
+}
+
+#cardName:hover {
+	opacity:100;
+	width: 125px;
+	height: 100px;
+	background: white;
+}
+
+.box{
+	border: 10px solid black;
+	box-shadow:10px 10px 10px red;
+	width: 125px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	background: white;
+}
+
+#trainingTable {
+	width: 50%;
+	height: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 30px;
+	align-content: center;
+}
+
+.trainingTableCaption {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 35px;
+	width: 25%;
+	height: 50%;
+	padding: 25px;
+	border-spacing: 30px;
+}
+
+ .trainingTabletd, .trainingTableth, .trainingTabletr  {
+	border: 10px solid black;
+	padding: 50px;
+	box-shadow:10px 10px 10px red;
+	height: 20px;
+	width: 50px;
+	background: white;
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#nextButton{
+	font-size: 12px;
+	height: 40px;
+	background-color: white;
+	border: 1px solid black;
+	font-family: sans-serif;
+}
+
+#setQuiz{
+	font-size: 12px;
+	height: 40px;
+	background-color: white;
+	border: 1px solid black;
+	font-family: sans-serif;
+}
